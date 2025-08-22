@@ -1,0 +1,35 @@
+---
+// const {name, photo, course, linkedin} = Astro.props.member;
+const { id, name, photo, course, linkedin } = Astro.props;
+---
+
+<div class="member-list-container">
+    <img src={photo} alt={name}/>
+    <a href={linkedin}><h2>{course}<br>{name}</h2></a>
+</div>
+
+<style>
+    .member-list-container {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap:0.5rem;
+        padding: 0.5rem;
+        font-family: "JetBrains Mono", monospace;
+        text-align: center;
+        font-size: 0.75rem;
+        width: 150px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: orange;
+    }
+    img {
+        height: 150px;
+        border-radius: 100%;
+    }
+
+</style>

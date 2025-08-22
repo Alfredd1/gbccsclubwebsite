@@ -1,0 +1,82 @@
+---
+
+---
+<div class="grid_container">
+    <div class="info-container">
+
+    </div>
+    <button class="btn club">The Club</button>
+    <button class="btn events">Events</button>
+    <button class="btn challenge">Weekly Challenge</button>
+</div>
+
+<style>
+    .grid_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10fr 1fr;
+        width: 100%;
+        height: 50vh;
+        border: 1px solid black;
+    }
+    .btn {
+        all: unset;
+        font-size: 18px;
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        padding: 0.7em 2em;
+        border-radius: 2px;
+        position: relative;
+        color: black;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+    .btn:before {
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: '';
+        background-color: #FF0072;
+        z-index: -1;
+    }
+    .btn:hover, .btn:focus{
+        color: white;
+    }
+    .btn:hover:before, .btn:focus:before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+    .btn:active {
+        transform: scale(0.9);
+    }
+    .info-container {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .club {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-top: 1px solid black;
+    }
+    .events {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        border-top: 1px solid black;
+    }
+    .challenge {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        border-top: 1px solid black;
+    }
+</style>

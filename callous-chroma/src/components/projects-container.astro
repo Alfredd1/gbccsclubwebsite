@@ -1,0 +1,48 @@
+---
+const {photo, title, description, github, website} = Astro.props;
+---
+<!--<div class="project-container">-->
+<!--    <div class="project-image-box"></div>-->
+<!--    <div class="project-information-box">-->
+<!--        <h2>Bit Shifter League</h2>-->
+<!--        <h2>Weekly GBC Coding Tournament</h2>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="project-container">
+    <div class="project-image-box">
+        <img class="project-image" :src="photo" />
+    </div>
+    <div class="project-information-box">
+        <h2>{title}</h2>
+        <h2>{description}</h2>
+    </div>
+</div>
+
+<style>
+    .project-container {
+        display: inline-flex;
+        flex-direction: column;
+        height: 450px;
+        width: 35%;
+        border: 1px solid black;
+        font-family: "JetBrains Mono", monospace;
+        transition: transform 0.5s ease;
+        box-shadow: 0 0 0 rgba(0,0,0,0.2);
+    }
+    .project-container > div {
+        flex: 1;
+    }
+    .project-image-box {
+        background-color: #DFC2C2;
+    }
+    .project-information-box {
+        padding-left: 20px;
+        font-size: 0.9rem;
+        background-color: #FFD5D5;
+    }
+    .project-container:hover {
+        transition: 0.5s all ease;
+        transform: scale(1.1);
+        box-shadow: 10px 10px 0 rgba(0,0,0,0.3);
+    }
+</style>

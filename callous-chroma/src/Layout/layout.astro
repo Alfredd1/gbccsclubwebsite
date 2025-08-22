@@ -1,0 +1,68 @@
+---
+
+---
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>GBC CS Club</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <slot name="csc-logo-title"/>
+        </header>
+
+        <main>
+            <slot name="event-box"/>
+            <h2>Current Members and Recent Alumni</h2>
+            <div class="member-list-container">
+                <slot name="member-list" />
+            </div>
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <slot name="projects-container" />
+            </div>
+        </main>
+
+
+    </body>
+</html>
+
+<style>
+    .member-list-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    html {
+        background: #FFE6E6;
+    }
+    body {
+        height: 200vh;
+        font-family: "JetBrains Mono", monospace;
+        text-align: center;
+    }
+    main {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        width: 100%;
+    }
+</style>

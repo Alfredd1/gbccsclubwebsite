@@ -1,0 +1,36 @@
+---
+import Layout from '../Layout/layout.astro';
+import Header from '../components/csc-logo-title.astro';
+import EventBox from '../components/event-box.astro';
+import MemberList from '../components/member-list.astro';
+import Projects from '../components/projects-container.astro';
+import {getCollection, getEntry} from "astro:content";
+
+const members = await getCollection('members');
+const memberList = members[0].data;
+const projects = await getCollection('projects');
+const projectList = projects[0].data;
+---
+
+<Layout >
+    <script>
+
+    </script>
+    <Header  slot="csc-logo-title"/>
+    <EventBox slot="event-box" />
+
+    {
+        memberList.map((member) => (
+            <MemberList {...member} slot="member-list"/>
+        ))
+    }
+    {
+        projectList.map(project => (
+            <Projects {...project} slot="projects-container" />
+        ))
+    }
+</Layout>
+
+<style>
+
+</style>

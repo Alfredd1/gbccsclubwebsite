@@ -1,0 +1,23 @@
+[
+  {
+    "id": "sokmontrey",
+    "name": "Sokmontrey Sythat",
+    "photo": "/student_photos/sokmontrey.jpg",
+    "course": "T177",
+    "linkedin": "https://www.linkedin.com/in/sokmontrey/"
+  },
+  {
+    "id": "karina",
+    "name": "Karina Vetlugina",
+    "photo": "/student_photos/karina.jpg",
+    "course": "T177",
+    "linkedin": "https://www.linkedin.com/in/karina-vetlugina/"
+  },
+  {
+  "id": "alfred",
+  "name": "Alfred Ranz Navarro",
+  "photo": "/student_photos/alfred.jpg",
+  "course": "T177",
+  "linkedin": "https://www.linkedin.com/in/alfred-ranz-navarro"
+  }
+]
